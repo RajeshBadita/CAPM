@@ -21,7 +21,7 @@ modules:
  - name: myHANAApp-srv
  # ------------------------------------------------------------
    type: nodejs
-   path: gen/srv
+   path: srv
    requires:
     # Resources extracted from CAP configuration
     - name: myHANAApp-db
@@ -34,7 +34,7 @@ modules:
  - name: myHANAApp-db-deployer
  # ------------------------------------------------------------
    type: hdb
-   path: gen/db  
+   path: db  
    parameters:
      buildpack: nodejs_buildpack
    requires:

@@ -8,10 +8,7 @@
     "dependencies": {
         "@sap/cds": "^5",
         "express": "^4",
-        "@sap/hana-client": "^2.6.61"
-    },
-    "devDependencies": {
-        "sqlite3": "^5.0.2"
+        "@sap/hana-client": "^2.7"
     },
     "scripts": {
         "start": "cds run"
@@ -42,9 +39,12 @@
         }
     },
     "cds": {
+        "build": {
+            "target": "."
+        },
         "requires": {
             "db": {
-                "kind": "sql"
+                "kind": "hana"
             }
         },
         "hana": {
